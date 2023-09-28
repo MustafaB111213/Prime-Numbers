@@ -6,16 +6,16 @@ public class PrimeCounter {
 		PrimeCounter primeCounter = new PrimeCounter();
 		
 
-		System.out.println(primeCounter.isPrime(13));
+		System.out.println(primeCounter.isPrime(17));
 		System.out.println(primeCounter.primeNumberFromOneTo(30));
 		
 	}
-	boolean isPrime(int n) {
+	boolean isPrime(int number) {
 		boolean isPrime = false;
-		if (n>0) {
-			if (n!=2) {
-				for (int i = 2; i < Math.sqrt(n)+1 ; i++) {
-					if (n%i==0) {
+		if (number>0) {
+			if (number!=2) {
+				for (int index = 2; index < Math.sqrt(number)+1 ; index++) {
+					if (number%index==0) {
 						isPrime = false;
 						break;
 					}
@@ -31,10 +31,10 @@ public class PrimeCounter {
 		return isPrime;
 	}
 	
-	int primeNumberFromOneTo(int n) {
+	int primeNumberFromOneTo(int number) {
 		int primeCounter = 0;
 		
-		for (int i = 0; i < n; i++) {
+		for (int i = 0; i < number; i++) {
 			if (isPrime(i)) {
 				primeCounter++;
 			}
